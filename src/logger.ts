@@ -43,7 +43,7 @@ export function sendCrashResponse({
   // right before sending the response, to make sure that no concurrent
   // execution sends the response between the check and 'send' call below.
   if (res && !res.headersSent) {
-    res.set(FUNCTION_STATUS_HEADER_FIELD, 'crash');
+    //res.set(FUNCTION_STATUS_HEADER_FIELD, 'crash');
     res.send(err.message || err);
   }
   if (callback) {
